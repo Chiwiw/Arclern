@@ -2,73 +2,111 @@
 |----|----------------    |----------|
 | 1  |Hanif Mawla Faizi   |5027241064|
 
-# 🌱 Arclern
-**Arclern** adalah aplikasi web sederhana yang membantu mahasiswa (atau siapa pun yang sedang belajar) untuk **melacak perkembangan skill mereka secara terstruktur**.  
-Alih-alih belajar banyak hal tapi sering lupa sejauh apa progress yang sudah dicapai, Arclern hadir sebagai tempat untuk menyimpan, memantau, dan merefleksikan perkembangan skill dari waktu ke waktu.
+# 🌱 Arclern — Skill Progress Tracker
+
+Arclern adalah aplikasi web yang membantu pengguna—khususnya mahasiswa dan pembelajar mandiri—untuk **melacak perkembangan skill yang sedang dipelajari**, lengkap dengan pencatatan progres, level kompetensi, dan dokumentasi berupa file atau gambar.
+
+Daripada belajar banyak hal tetapi lupa sudah sejauh apa peningkatan yang dicapai, Arclern hadir sebagai ruang pribadi untuk menyimpan perjalanan belajar secara terstruktur dan bermakna.
 
 ---
 
-## ✨ Apa itu Arclern?
-Arclern adalah **Skill Progress Tracker**, tempat pengguna bisa:
+## 🎯 Tujuan Arclern
 
-- Menambahkan skill yang sedang dipelajari  
-- Mencatat progres belajar dalam bentuk log (misalnya: “Belajar React 1 jam”, “Practice C++ OOP”, dll.)  
-- Mengupload bukti atau dokumentasi (contoh: screenshot, sertifikat, hasil latihan)  
-- Melihat perkembangan skill secara keseluruhan  
-- Memantau konsistensi dan pertumbuhan belajar  
+Banyak orang belajar banyak skill sekaligus (coding, UI/UX, editing video, bahasa asing, dll), namun:
 
-Tujuan utama Arclern adalah **membantu pengguna memahami perjalanan belajar mereka**, bukan hanya mengingat materi, tetapi juga melihat peningkatan nyata yang terjadi dari waktu ke waktu.
+- Tidak tahu posisi level skill saat ini
+- Kehilangan jejak materi terakhir yang dipelajari
+- Tidak punya dokumentasi progres
+- Tidak sadar sudah berkembang sejauh apa
 
----
+Arclern membantu user untuk:
 
-## 🎯 Kenapa Arclern Dibuat?
-Banyak mahasiswa belajar banyak skill sekaligus—programming, desain, editing, analisis data, dan lain-lain—tapi:
+- **Mendokumentasikan skill yang sedang dipelajari**
+- **Melacak level skill (Beginner → Advanced → Expert)**
+- **Mencatat update progress & refleksi belajar**
+- **Mengunggah file sebagai bukti pembelajaran**
+- **Melihat progres mereka dalam dashboard personal**
 
-- Sering lupa sudah sejauh apa belajarnya  
-- Tidak punya dokumentasi perkembangan  
-- Tidak yakin apakah mereka “berkembang” atau hanya belajar acak  
-- Bingung membuat portofolio karena tidak punya catatan progres  
-
-Arclern membantu menjawab masalah tersebut dengan:
-
-- Tracking skill secara rapi  
-- Membuat log yang mudah dipantau  
-- Menyimpan bukti belajar  
-- Menjaga motivasi dan konsistensi  
+Aplikasi ini bersifat personal — **skill milik user hanya bisa dilihat oleh user itu sendiri**, bukan social sharing platform.
 
 ---
 
-## 🧩 Fitur Utama
-- **Authentication (Register & Login)**  
-- **CRUD Skill** (buat, lihat, edit, hapus skill)  
-- **Progress Logging** (menambahkan catatan perkembangan untuk setiap skill)  
-- **Upload File / Gambar** untuk bukti belajar  
-- **Dashboard untuk melihat overview perkembangan**
+## ✨ Fitur Utama
+
+| Fitur | Status |
+|-------|--------|
+| Register & Login (JWT Auth) | ✔️ |
+| Protected Route (Token-based) | ✔️ |
+| CRUD Skill (Create, Read, Update, Delete) | ✔️ |
+| File / Image Upload | ✔️ |
+| Dashboard Skill User | ✔️ |
+| Only Self Data (No public browsing) | ✔️ |
 
 ---
 
-## 👤 Siapa yang Cocok Menggunakan Arclern?
-- Mahasiswa yang belajar banyak skill sekaligus  
-- Pembelajar mandiri (self-learner)  
-- Orang yang sedang membangun portofolio  
-- Siapa pun yang ingin belajar lebih teratur & terarah  
+## 🛠️ Tech Stack
+
+### **Frontend**
+- React + TypeScript
+- TailwindCSS
+- React Router
+- Axios
+- Context API (Auth State)
+
+### **Backend**
+- Node.js + Express.js
+- MongoDB + Mongoose
+- JWT Authentication
+- Bcrypt
+- Multer (File Upload)
 
 ---
 
-## 🚀 Tujuan Utama
-Membantu pengguna **tetap sadar progres**, **lebih konsisten**, dan **lebih percaya diri** dengan pencapaian skill yang mereka bangun setiap harinya.
+## 📡 API Endpoint Summary
 
----
+### 🔐 Auth
 
-## 📌 Status Proyek
-Saat ini Arclern masih dalam tahap pengembangan awal.  
-Fitur dasar seperti auth, CRUD, dan upload akan menjadi fokus utama.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | Registrasi akun baru |
+| POST | `/api/auth/login` | Login user & kirim JWT |
 
----
+### 🧩 Skills (Protected)
 
-## 📄 Lisensi
-Proyek ini dibuat untuk keperluan pembelajaran dan tugas.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/skills` | Ambil semua skill milik user |
+| POST | `/api/skills` | Tambah skill |
+| PUT | `/api/skills/:id` | Update skill |
+| DELETE | `/api/skills/:id` | Hapus skill |
+| POST | `/api/skills/:id/upload` | Upload file bukti skill |
 
----
+Semua endpoint skill **wajib mengirimkan token** di header:
 
+## 🚀 Cara Menjalankan Proyek
 
+### Backend
+```sh
+cd backend
+npm install
+npm run dev
+```
+
+### Frontend
+```sh
+cd frontend
+npm install
+npm run dev
+```
+
+## 📄 License
+
+Proyek ini dibuat untuk tujuan pembelajaran, tugas perkuliahan, dan eksplorasi teknologi.
+Feel free to explore, fork, atau kembangkan lebih lanjut.
+
+## 👤 Dibuat oleh
+
+Hanif (Arclern Project Owner & Developer)
+
+“Skill isn’t what you claim — it’s what you consistently build.”
+— Arclern Philosophy
