@@ -1,0 +1,36 @@
+# Backend (.gitignore)
+
+# Node
+node_modules/
+
+# Build / output
+dist/
+build/
+
+# Uploads / runtime artifacts
+uploads/
+uploads/*
+
+# Environment
+.env
+.env.*.local
+.env.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+
+# Other
+.cache/

@@ -1,0 +1,44 @@
+# Root .gitignore for the workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.*.local
+.env.local
+
+# TypeScript
+*.tsbuildinfo
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Packages
+dist/
+build/
+
+# Misc
+.cache/
+coverage/
+
+# Lockfiles sometimes intentionally committed; do not ignore by default here
+# bun.lockb
+# package-lock.json
