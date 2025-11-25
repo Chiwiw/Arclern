@@ -1,4 +1,6 @@
-**belom jadi ygy**
+| No | Nama               | NRP      |
+|----|----------------    |----------|
+| 1  |Hanif Mawla Faizi   |5027241064|
 
 # 🌱 Arclern
 **Arclern** adalah aplikasi web sederhana yang membantu mahasiswa (atau siapa pun yang sedang belajar) untuk **melacak perkembangan skill mereka secara terstruktur**.  
@@ -68,4 +70,5 @@ Fitur dasar seperti auth, CRUD, dan upload akan menjadi fokus utama.
 Proyek ini dibuat untuk keperluan pembelajaran dan tugas.
 
 ---
+
 
